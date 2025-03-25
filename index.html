@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Preview</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Music Preview App</h1>
+        <section class="music-container">
+            <div class="song-list" id="songList"></div>
+            <div class="song-details" id="songDetails"></div>
+        </section>
+        <form id="addSongForm">
+            <input type="text" id="songTitle" placeholder="Song Title" required>
+            <input type="text" id="songArtist" placeholder="Artist" required>
+            <input type="text" id="songAlbum" placeholder="Album" required>
+            <input type="url" id="coverUrl" placeholder="Cover Image URL" required>
+            <button type="submit">Add Song</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
