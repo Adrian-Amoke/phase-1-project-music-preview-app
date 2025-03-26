@@ -33,7 +33,7 @@ function displaySongs() {
 
         //event that changes color when song item is hovered over
         songItem.addEventListener('mouseover', () => {
-            songItem.style.backgroundColor = '#F1D3B2';
+            songItem.style.backgroundColor = '#0B0C10';
         });
         //resets the background color of the song item 
         songItem.addEventListener('mouseout', () => {

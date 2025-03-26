@@ -1,4 +1,4 @@
-# phase-1-project-music-preview-app# Music Preview Application
+# Music Preview Application
 
 ## Overview
 The Music Preview Application is an interactive web platform designed for music enthusiasts to discover, preview, and manage their favorite songs. Users can browse a curated list of songs, view detailed information about each track, and add new songs to their personal collection.
