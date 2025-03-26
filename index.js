@@ -8,7 +8,7 @@ let songs = [];
 
 //Retrieves song data from the server
 function fetch() {
-    fetch('http://localhost:3000/songs')// makes a get request to the url
+    fetch('https://my-json-server.typicode.com/Adrian-Amoke/phase-1-project-music-preview-app')// makes a get request to the url
         .then(response => response.json()) // processes the response and and converts it from json to js
         .then(data => {
             songs = data; //assigns the fethced data to the songs array
@@ -60,17 +60,18 @@ function showSongDetails(song) {
 }
 //Event listener for form submission
 addSongForm.addEventListener('submit', (evt) => {
-    evt.preventDefault();
+    evt.preventDefault(); //prevents the page from refreshing after submission
     const title = document.getElementById('songTitle').value;
     const artist = document.getElementById('songArtist').value;
     const album = document.getElementById('songAlbum').value;
     const coverUrl = document.getElementById('coverUrl').value;
-    //Create a new song object
+    //Create a new song object using the enteres values
     const newSong = { title, artist, album, coverUrl };
     //add new song to the songs array
     songs.push(newSong);
+    //updates the displayed song list with the newly added song
     displaySongs();
-    //Clear the form
+    //resets the form fields to their initial empty state after submission
     addSongForm.reset();
 });
 

@@ -1,0 +1,23 @@
+{
+  "name": "phase-1-project-music-preview-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adrian-Amoke/phase-1-project-music-preview-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adrian-Amoke/phase-1-project-music-preview-app/issues"
+  },
+  "homepage": "https://github.com/Adrian-Amoke/phase-1-project-music-preview-app#readme",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
