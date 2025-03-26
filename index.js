@@ -8,7 +8,7 @@ let songs = [];
 
 //Retrieves song data from the server
 function fetch() {
-    fetch('https://my-json-server.typicode.com/Adrian-Amoke/phase-1-project-music-preview-app')// makes a get request to the url
+    fetch('https://phase-1-project-music-preview-app-1.onrender.com/api')// makes a get request to the url
         .then(response => response.json()) // processes the response and and converts it from json to js
         .then(data => {
             songs = data; //assigns the fethced data to the songs array
