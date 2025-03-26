@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "phase-1-project-music-preview-app",
   "version": "1.0.0",
   "description": "",
