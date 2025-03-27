@@ -1,4 +1,3 @@
-const songsData = 'https://my-app-backend-in2a.onrender.com/api/songs'
 const songList = document.getElementById('songList');
 const songDetails = document.getElementById('songDetails');
 const addSongForm = document.getElementById('addSongForm');
@@ -7,7 +6,7 @@ let songs = [];
 
 //Retrieves song data from the server
 function fetchSongs() {
-    fetch(songsData)
+    fetch('https://my-app-backend-in2a.onrender.com/api/songs')
         .then(response => response.json())
         .then(data => {
             songs = data; 
