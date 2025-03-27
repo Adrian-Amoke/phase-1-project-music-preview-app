@@ -1,13 +1,13 @@
 # Music Preview Application
 
 ## Overview
-The Music Preview Application is an interactive web platform designed for music enthusiasts to discover, preview, and manage their favorite songs. Users can browse a curated list of songs, view detailed information about each track, and add new songs to their personal collection.
+The Music Preview Application is an interactive web application designed to provide music lovers with a better way to discover, preview, and manage their favorite songs. Users can browse a wide list of songs, view detailed information about each song, and add new songs to their collection.
 
 ## Key Features
-- **Dynamic Song List**: View a list of songs fetched from a local server.
-- **Cover Image Display**: Each song is represented by its cover image.
-- **Song Details on Click**: Click on a song to see detailed information, including the title, artist, and album.
-- **Add New Songs**: Easily add new songs through a simple form.
+- **Dynamic Song List**: A list of songs is generated with the user's requests from a local server and therefore always in sync and enjoyable
+- **Cover Image Display**: Songs are displayed by their covers, which makes it easier to navigate the album and makes it more visually appealing.
+- **Song Details on Click**: Users can click on a song to display detailed information such as the song title, artist, and album providing a better user experience.
+- **Add New Songs**: The application allows users to easily add new songs through a simple form to encourage personalization and user engagement.
 - **Responsive Design**: User-friendly and responsive interface for various devices.
 
 ## Technologies Used
@@ -23,6 +23,8 @@ The Music Preview Application is an interactive web platform designed for music 
    git clone https://github.com/Adrian-Amoke/phase-1-project-music-preview-app.git
 
    cd music-preview-app
+   
+   code .
 
 2. **Install Dependencies**
     ```bash
@@ -79,6 +81,10 @@ Open your web browser and navigate to https://adrian-amoke.github.io/phase-1-pro
 - Browse the list of songs displayed on the main page.
 - Click on a song to view its details, including the title, artist, album, and cover image.
 - Use the form at the bottom of the page to add new songs to the list.
+
+## Conclusion
+The Music Preview Application is an innovative & interactive music discovery and management application. It's targeted at giving users an entertaining user interface with excellent functionality.
+
 
 
 
