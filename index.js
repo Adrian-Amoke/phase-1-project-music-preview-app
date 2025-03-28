@@ -16,7 +16,6 @@ function fetchSongs() {
         .then(response => response.json())
         .then(data => {
             songs = data;
-            displaySongs(songs);
         })
         .catch(error => console.error('Error fetching songs:', error));
 }
@@ -27,7 +26,6 @@ function loadFavourites() {
         .then(response => response.json())
         .then(data => {
             favourites = data.map(fav => {
-                // Ensure each favourite has complete data
                 const fullSong = songs.find(song => song.title === fav.title);
                 return fullSong ? fullSong : fav;
             });
@@ -44,7 +42,7 @@ function saveFavourites() {
     }).catch(error => console.error('Error saving favourites:', error));
 }
 
-// Display songs (or favourites if toggled)
+// Display songs (only when searched or favourited)
 function displaySongs(songArray) {
     songList.innerHTML = '';
     songArray.forEach((song) => {
@@ -57,10 +55,12 @@ function displaySongs(songArray) {
         `;
 
         songItem.addEventListener('click', () => showSongDetails(song));
+        songItem.addEventListener('focus', () => songItem.style.transform = 'scale(1.1)');
+        songItem.addEventListener('blur', () => songItem.style.transform = 'scale(1)');
 
         const favButton = songItem.querySelector('.fav-btn');
         favButton.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent click event from triggering song details
+            event.stopPropagation();
             if (showingFavourites) {
                 removeFromFavourites(song);
             } else {
@@ -117,7 +117,7 @@ searchButton.addEventListener('click', () => {
 favouritesButton.addEventListener('click', () => {
     showingFavourites = !showingFavourites;
     favouritesButton.textContent = showingFavourites ? 'All Songs' : 'Favourites';
-    displaySongs(showingFavourites ? favourites : songs);
+    displaySongs(showingFavourites ? favourites : []);
 });
 
 // Handle form submission to add a new song
@@ -130,7 +130,6 @@ addSongForm.addEventListener('submit', (evt) => {
 
     const newSong = { title, artist, album, coverUrl };
 
-    // Save new song to backend
     fetch('https://my-app-backend-in2a.onrender.com/api/songs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -139,7 +138,6 @@ addSongForm.addEventListener('submit', (evt) => {
     .then(response => response.json())
     .then(savedSong => {
         songs.push(savedSong);
-        if (!showingFavourites) displaySongs(songs);
     })
     .catch(error => console.error('Error adding song:', error));
 
