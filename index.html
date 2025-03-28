@@ -9,10 +9,22 @@
 <body>
     <div class="container">
         <h1>Music Preview App</h1>
+
+        <button id="favouritesButton">Favourites</button>
+
+        <input type="text" id="searchInput" placeholder="Search for songs...">
+        <select id="filterType">
+            <option value="title">Title</option>
+            <option value="artist">Artist</option>
+            <option value="album">Album</option>
+        </select>
+        <button id="searchButton">Search</button>
+
         <section class="music-container">
             <div class="song-list" id="songList"></div>
             <div class="song-details" id="songDetails"></div>
         </section>
+
         <form id="addSongForm">
             <p>Song Title</p>
             <input type="text" id="songTitle" required>
@@ -25,6 +37,7 @@
             <button type="submit">Add Song</button>
         </form>
     </div>
+    
     <script src="index.js"></script>
 </body>
 </html>

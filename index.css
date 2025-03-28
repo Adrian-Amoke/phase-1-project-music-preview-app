@@ -27,16 +27,24 @@ h1 {
     transition: background 0.3s;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    background-color: #0b0c10;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .song-list {
-    margin: bottom 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .song-item img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin-right: 10px;
+    border-radius: 8px;
 }
 
 .song-item:hover {
@@ -79,7 +87,54 @@ form button:hover {
     background: #05146e;
 }
 
-
 p {
     text-align: center;
+}
+
+/* Search and filter styles */
+#searchInput, #filterType, #searchButton {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-size: large;
+}
+
+#searchButton {
+    background: #45A29E;
+    color: white;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background: #0B0C10;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.favourite-button {
+    background: #FFD700;
+    color: black;
+}
+
+.favourite-button:hover {
+    background: #FFC107;
+}
+
+.remove-favourite-button {
+    background: #FF4136;
+    color: white;
+}
+
+.remove-favourite-button:hover {
+    background: #D32F2F;
 }
