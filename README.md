@@ -4,11 +4,15 @@
 The Music Preview Application is an interactive web application designed to provide music lovers with a better way to discover, preview, and manage their favorite songs. Users can browse a wide list of songs, view detailed information about each song, and add new songs to their collection.
 
 ## Key Features
-- **Dynamic Song List**: A list of songs is generated with the user's requests from a local server and therefore always in sync and enjoyable
-- **Cover Image Display**: Songs are displayed by their covers, which makes it easier to navigate the album and makes it more visually appealing.
-- **Song Details on Click**: Users can click on a song to display detailed information such as the song title, artist, and album providing a better user experience.
-- **Add New Songs**: The application allows users to easily add new songs through a simple form to encourage personalization and user engagement.
-- **Responsive Design**: User-friendly and responsive interface for various devices.
+- **Add Songs**: Users can add new songs by entering the title, artist, album, and cover image.
+
+- **Search & Filter**: Search for songs and filter results based on title, artist, or album.
+
+- **Favorites** Section: Mark and store songs as favorites for quick access.
+
+- **Persistent Storage**: All song data and favorites are stored using an online backend API, ensuring data is retained even after refreshing the page.
+
+- **Responsive UI**: Grid-based song tiles with interactive hover effects and animations.
 
 ## Technologies Used
 -  HTML

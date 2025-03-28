@@ -116,7 +116,7 @@ searchButton.addEventListener('click', () => {
 // Show favourites when button is clicked
 favouritesButton.addEventListener('click', () => {
     showingFavourites = !showingFavourites;
-    favouritesButton.textContent = showingFavourites ? 'Show All Songs' : 'Show Favourites';
+    favouritesButton.textContent = showingFavourites ? 'All Songs' : 'Favourites';
     displaySongs(showingFavourites ? favourites : songs);
 });
 
